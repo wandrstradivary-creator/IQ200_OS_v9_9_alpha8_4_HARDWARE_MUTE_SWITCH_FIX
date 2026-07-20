@@ -1,0 +1,19 @@
+IQ200 OS v9.6-alpha3.2 WEB UI 2.0 + SD GOVERNOR
+
+Adaptive SD recovery path:
+- Boot/default: 16 MHz
+- First unrecovered read failure: remount/reopen at 12 MHz
+- Second unrecovered read failure: remount/reopen at 8 MHz
+- Clock never rises again until reboot
+- Each level uses 3 local read attempts with 2/8/20 ms delays
+- Stream reopens at the exact compressed byte position
+
+Commands:
+- sd status
+- sd stats
+
+New SD statistics:
+- recTry: recovery/remount attempts
+- down: clock downshifts
+- freq: current SPI clock
+- level: 0=16 MHz, 1=12 MHz, 2=8 MHz

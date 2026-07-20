@@ -1,0 +1,14 @@
+# IQ200 scan ignore list
+System Volume Information
+$RECYCLE.BIN
+LOST.DIR
+.Trash
+.Trashes
+.fseventsd
+.Spotlight-V100
+Android/data
+Android/obb
+DCIM/.thumbnails
+cache
+tmp
+Temp

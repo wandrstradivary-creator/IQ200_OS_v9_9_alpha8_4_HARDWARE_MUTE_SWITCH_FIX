@@ -1,0 +1,19 @@
+IQ200 OS v9.8-alpha2 WiFi AP Settings
+
+1. Flash and open Serial Monitor at the project baud rate.
+2. Run: net ap
+3. Connect phone/PC to SSID: IQ200-OS
+4. Open: http://192.168.4.1/
+5. Open the WiFi tab.
+6. Test Refresh and Scan networks.
+7. Select or enter an SSID, enter password, press Connect AP+STA.
+8. The IQ200-OS AP must remain available while STA connects.
+9. Confirm AP address 192.168.4.1 and STA address/RSSI in the WiFi tab.
+10. Test Disconnect STA and Reconnect saved.
+
+REST endpoints:
+GET  /api/wifi/status
+GET  /api/wifi/scan?start=1
+POST /api/wifi/connect  (ssid, password, keepAp=1)
+POST /api/wifi/disconnect
+POST /api/wifi/reconnect

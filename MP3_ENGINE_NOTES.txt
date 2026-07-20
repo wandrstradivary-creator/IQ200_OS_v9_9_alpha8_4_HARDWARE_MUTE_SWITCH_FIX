@@ -1,0 +1,23 @@
+IQ200 OS v9.7-alpha1 MP3 ENGINE
+
+Added:
+- MP3PlayerService based on dr_mp3 from the existing dr_libs dependency.
+- MP3 SDManager::Stream input, PCM16 stereo output, I2S playback.
+- MP3 progress, VU L/R, health, EOF and SDERR mirroring.
+- MP3 participates in stop, handoff and Auto Next.
+
+Supported playback in this build:
+- FLAC
+- MP3
+- WAV PCM16
+
+Recognized but not decoded yet:
+- OGG Vorbis
+- AAC/M4A
+- OPUS
+
+Expected MP3 log:
+[IQPLAYER] MP3 SD->dr_mp3->I2S start: ...
+[MP3] buffers frames=2304 bytesEach=9216 ready=1
+[AUDIO-RT] v9.7-alpha1 MP3 ENGINE task core=0 framesPerRead=2304
+[IQPLAYER] MP3 info: 44100 Hz source_ch=2 out_ch=2 bits=16 pcm_bytes=...
